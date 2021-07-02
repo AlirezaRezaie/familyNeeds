@@ -1,0 +1,11 @@
+.rtl {
+  direction: rtl;
+}
+
+.red{
+  background-color:red
+}
+
+.bold {
+  text-transform: uppercase;
+}

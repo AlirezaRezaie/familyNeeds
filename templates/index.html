@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for item in items %}
+<div class="list-group">
+
+  <div
+    class="
+      list-group-item list-group-item-action
+      flex-column
+      align-items-start
+      rtl
+    "
+    id = {{ item.id }}
+  >
+    <div class="d-flex w-100 justify-content-between">
+      <h5>{{ item.description}}</h5>
+      <small>{{item.dateCreated | timesince}} پیش</small>
+    </div>
+    <small class="rtl bold text-muted">
+        {% if item.author == user %}
+            شما
+        {% else %}
+            {{item.author}}
+        {%endif%}
+    </small>
+
+
+  </div>
+</div>
+
+{% endfor %}
+    <ul>
+    {% if errors %}
+        <li>لطفا یک نیازمندی جدید وارد کنید</li>
+    {% endif %}
+    </ul>
+
+   <form method="post" class="m-2">
+   {% csrf_token %}
+      {{ form }}
+      <button type="submit" class="align-center btn btn-outline-success btn-lg btn-block m-2">ثبت</button>
+  </form>
+{% endblock%}
