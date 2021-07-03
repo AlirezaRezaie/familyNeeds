@@ -1,6 +1,6 @@
 # familyNeeds
 
-the website hosting this project [1]: https://familyneeds.herokuapp.com/ "Hobbit lifestyles"
+<strong> the website hosting this project</strong> : https://familyneeds.herokuapp.com/
 <br>
 
 ### to install requirements
