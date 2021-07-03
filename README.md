@@ -15,7 +15,7 @@ cd familyNeeds
 
 > now we need to activate the virtual env by using:
 
->>in windows
+>in windows
 ```bash
 .\venv\Scripts\activate
 ```
