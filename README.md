@@ -14,12 +14,12 @@ cd familyNeeds
 ```
 
 > now we need to activate the virtual env by using:
-
+>
 >in windows
 ```bash
 .\venv\Scripts\activate
 ```
->> in Mac
+> in Mac
 ```bash
 .\venv\Scripts\activate
 ```
