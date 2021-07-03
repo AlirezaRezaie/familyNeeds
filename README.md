@@ -1,5 +1,6 @@
 # familyNeeds
 
+the website hosting this project [1]: https://familyneeds.herokuapp.com/ "Hobbit lifestyles"
 <br>
 
 ### to install requirements
@@ -13,7 +14,7 @@ clone https://github.com/Minerova/familyNeeds
 cd familyNeeds
 ```
 
-> now we need to activate the virtual env by using:
+> now we need to activate the virtualenv by using:
 >
 >in windows
 ```bash
@@ -32,9 +33,5 @@ and for stating the server run:
 ```bash
 python manage.py runserver <PORT>
 ```
-
-
-
-> hint : try plugging or unplugging the device
 
 <br>
