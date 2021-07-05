@@ -1,6 +1,6 @@
 # familyNeeds
 
-<strong> the website hosting this project</strong> : https://familyneeds.herokuapp.com/
+<strong> the website hosting this project</strong> : <a href="https://familyneeds.herokuapp.com/" target="_blank"> https://familyneeds.herokuapp.com/ </a>
 <br>
 
 ### to install requirements
