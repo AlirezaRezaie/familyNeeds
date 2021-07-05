@@ -1,10 +1,21 @@
 from django.shortcuts import render
-from django.shortcuts import redirect
+from django.shortcuts import redirect,HttpResponse
 from .forms import AddItem
 from .models import Item
+import re
 
 
 # Create your views here.
+def delete_items(request):
+    if request.method == "POST":
+        ids = request.POST.get("the_post").split(",")
+        for item_id in ids:
+            Item.objects.filter(id=item_id).delete()
+        return HttpResponse('psted')
+    else:
+        return HttpResponse("geted")
+
+
 def main_page(request):
     if request.user.is_authenticated:
         errors = []

@@ -2,10 +2,19 @@
   direction: rtl;
 }
 
-.red{
-  background-color:red
+.red {
+  background-color: red;
 }
 
 .bold {
   text-transform: uppercase;
+}
+
+body {
+  background: url("/static/images/background.png");
+}
+
+.trans {
+  color: black !important;
+  opacity: 0.5;
 }
