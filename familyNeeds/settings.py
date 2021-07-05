@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q&(&g4-@n5ksfvj10y-lg1nau1(4rasur9y#hbsn2a_79zqf8%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://familyneeds.herokuapp.com/','familyneeds.herokuapp.com', "localhost", "127.0.0.1"]
 
@@ -122,7 +122,7 @@ STATIC_URL = "/static/"
 
 #production
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
       
  
 
