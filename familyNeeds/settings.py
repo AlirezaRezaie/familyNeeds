@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-q&(&g4-@n5ksfvj10y-lg1nau1(4rasur9y#hbsn2a_79zqf8%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://familyneeds.herokuapp.com/','familyneeds.herokuapp.com', "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ['https://familyneeds.herokuapp.com/', "localhost", "127.0.0.1"]
 
 # Application definition
 
@@ -114,21 +114,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = "/static/"
 
-#development
-""" STATICFILES_DIRS = [
+# development
+STATICFILES_DIRS = [
         os.path.join(BASE_DIR, 'staticfiles')
 ]
- """
 
-#production
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-django_heroku.settings(locals())
-      
- 
+# production
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# django_heroku.settings(locals())
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 

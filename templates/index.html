@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
 
+{% block content %}
 {% for item in items %}
 <div class="list-group">
-
   <div
     onclick="handleClick(this.id)"
     class="
@@ -15,56 +14,57 @@
       m-2
       trans
     "
-    id = {{ item.id }}
+    id="{{item.id}}"
   >
     <div class="d-flex w-100 justify-content-between">
       <h5>{{ item.description}}</h5>
       <small>{{item.dateCreated | timesince}} پیش</small>
     </div>
     <small class="rtl bold text-muted">
-        {% if item.author == user %}
-            شما
-        {% else %}
-            {{item.author}}
-        {%endif%}
+      {% if item.author == user %} شما {% else %} {{item.author}} {%endif%}
     </small>
-
-
   </div>
 </div>
 
 {% endfor %}
-    <ul>
-    {% if errors %}
-        <div class="alert alert-warning alert-dismissible fade show m-4 rtl" role="alert">
-          لطفا یک نیازمندی جدید وارد کنید
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-    {% endif %}
-    </ul>
+<ul>
+  {% if errors %}
+  <div
+    class="alert alert-warning alert-dismissible fade show m-4 rtl"
+    role="alert"
+  >
+    لطفا یک نیازمندی جدید وارد کنید
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endif %}
+</ul>
 
-   <form method="post" class="m-2">
-   {% csrf_token %}
-      {{ form }}
-      <button type="submit" class="align-center btn btn-outline-success btn-lg btn-block m-2">ثبت</button>
-  </form>
+<form method="post" class="m-2">
+  {% csrf_token %} {{ form }}
+  <button
+    type="submit"
+    class="align-center btn btn-outline-success btn-lg btn-block m-2"
+  >
+    ثبت
+  </button>
+</form>
 <a class="btn btn-danger inline-form-control" onclick="deleteItems()">حذف</a>
 
-{% endblock content%}
-
-{% block script %}
-<script type="text/javascript">     window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
-<script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous">
+{% endblock content%} {% block script %}
+<script type="text/javascript">
+  window.CSRF_TOKEN = "{{ csrf_token }}";
 </script>
-<script src= "{% static 'javascript/index.js' %}" defer>  </script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+<script src="{% static 'javascript/index.js' %}" defer></script>
 <script>
-    if ( window.history.replaceState ) {
-      window.history.replaceState( null, null, window.location.href );
-    }
+  if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
 </script>
 {% endblock script %}
