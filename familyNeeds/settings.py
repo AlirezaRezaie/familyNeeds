@@ -115,13 +115,13 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 # development
-STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'staticfiles')
-]
+# STATICFILES_DIRS = [
+#         os.path.join(BASE_DIR, 'staticfiles')
+# ]
 
 # production
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# django_heroku.settings(locals())
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+django_heroku.settings(locals())
 
 
 # Default primary key field type
